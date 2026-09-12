@@ -13,6 +13,10 @@ def main():
         print("File tugas.json tidak dapat dibaca. Periksa file sebelum mencoba lagi.")
         return
 
+    if not isinstance(tugas, list) or not all(isinstance(item, str) for item in tugas):
+        print("Format tugas.json tidak valid. Isinya harus berupa daftar teks.")
+        return
+
     while True:
         print("\nDAFTAR TUGAS\n1. Lihat tugas\n2. Tambah tugas\n3. Selesaikan tugas\n4. Keluar")
         pilihan = input("Pilih menu: ").strip()
