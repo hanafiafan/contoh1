@@ -27,6 +27,8 @@ def main():
                 tugas.append(item)
                 DATA_FILE.write_text(json.dumps(tugas, ensure_ascii=False, indent=2))
                 print("Tugas tersimpan.")
+            else:
+                print("Tugas tidak boleh kosong. Silakan masukkan nama tugas.")
         elif pilihan == "3":
             try:
                 nomor = int(input("Nomor tugas yang selesai: "))
